@@ -1,11 +1,10 @@
 FROM --platform=linux/amd64 debian:bookworm
 
 ENV DEBIAN_FRONTEND=noninteractive
-RUN apt update -y && apt install --no-install-recommends -y xfce4 xfce4-goodies tigervnc-standalone-server novnc websockify sudo xterm init systemd snapd vim net-tools curl wget git tzdata
+RUN apt update -y && apt install --no-install-recommends -y gnome-core xorg tigervnc-standalone-server novnc websockify sudo xterm init systemd snapd vim net-tools curl wget git tzdata
 RUN apt update -y && apt install -y dbus-x11 x11-utils x11-xserver-utils x11-apps
 RUN apt install software-properties-common -y
 RUN apt update -y && apt install -y chromium
-RUN apt update -y && apt install -y xfce-icon-theme
 RUN touch /root/.Xauthority
 EXPOSE 5901
 EXPOSE 6080

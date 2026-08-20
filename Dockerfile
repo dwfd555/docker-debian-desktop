@@ -5,7 +5,7 @@ RUN apt update -y && apt install --no-install-recommends -y xfce4 xfce4-goodies 
 RUN apt update -y && apt install -y dbus-x11 x11-utils x11-xserver-utils x11-apps
 RUN apt install software-properties-common -y
 RUN apt update -y && apt install -y chromium
-RUN apt update -y && apt install -y xubuntu-icon-theme
+RUN apt update -y && apt install -y xfce-icon-theme
 RUN touch /root/.Xauthority
 EXPOSE 5901
 EXPOSE 6080
